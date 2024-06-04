@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #000528, #350043, #000528, #350043);
+    background-size: 800% 800%;
+    animation: Gradient 45s ease infinite;
+    color: white; /* Menetapkan warna teks menjadi putih */
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: white; /* Menetapkan warna teks label menjadi putih */
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: black; /* Menetapkan warna teks input dan textarea menjadi hitam untuk kontras */
+    background-color: white; /* Latar belakang putih untuk kontras */
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+h1 {
+    color: white; /* Mengatur warna teks menjadi putih */
+    font-size: 24px; /* Ukuran font, sesuaikan sesuai kebutuhan */
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    text-align: center;
+}

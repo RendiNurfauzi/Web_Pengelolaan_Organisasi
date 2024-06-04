@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #000528, #350043, #000528, #350043);
+    background-size: 800% 800%;
+    animation: Gradient 45s ease infinite;
+    color: white; /* Menetapkan warna teks menjadi putih */
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; /* Menghilangkan margin default untuk menghindari jarak ekstra */
+}
+
+button {
+    background-color: #007BFF; /* Warna latar belakang biru cerah */
+    color: white; /* Warna teks putih */
+    border: none; /* Tidak ada border */
+    padding: 10px 20px; /* Padding untuk membuat tombol lebih besar */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Mengubah cursor menjadi pointer saat mouse berada di atas tombol */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Warna latar belakang lebih gelap saat di-hover */
+}

@@ -1,0 +1,141 @@
+/* Reset beberapa style dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* prevent waves from overflowing the body */
+  background: linear-gradient(270deg, #000528, #350043, #000528, #350043);
+  background-size: 800% 800%;
+  animation: Gradient 45s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.bubble {
+  z-index: -1;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px; /* start position */
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* glow effect */
+  animation: bubbleAnimation 4s linear infinite;
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page {
+  background: rgba(255, 255, 255, 0.203); /* Warna putih dengan transparansi */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(10px); /* Efek blur untuk glass effect */
+}
+
+.heroContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: 24px;
+  color: #cdcdcd;
+}
+
+.subTitle, .welcomeTitle {
+  font-size: 18px;
+  color: #cdcdcd;
+}
+
+.contentBox {
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailContainer, .passwordContainer {
+  margin-bottom: 15px;
+}
+
+.emailTitle, .passwordTitle {
+  font-size: 16px;
+  color: #cdcdcd;
+  margin-bottom: 5px;
+}
+
+.emailInput, .passwordInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.loginButton {
+  background-color: #4518f8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #99007d;
+}
+
+.registerTitle {
+  text-align: center;
+  color: #0066cc;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.registerTitle:hover {
+  text-decoration: underline;
+}

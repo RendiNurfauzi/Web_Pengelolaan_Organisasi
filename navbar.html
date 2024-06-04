@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZOZING</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            z-index: 9999;
+            width: 100%;
+            background: linear-gradient(270deg, #00031a, #23002d, #00031c, #2a0035);
+    background-size: 800% 800%;
+    animation: Gradient 45s ease infinite;
+  
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* Menambahkan positioning relatif untuk navbar */
+        }
+        @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, backdrop-filter 0.3s ease; /* Menambahkan transisi untuk animasi */
+}
+
+.navbar a:hover {
+    background-color: #ddddddd3;
+    color: black;
+    backdrop-filter: blur(10px); /* Efek blur untuk glass effect */
+}
+
+        .hamburger {
+            display: none;
+            float: right;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+
+        #user-info {
+            position: absolute;
+            /* Posisi absolut relatif terhadap navbar */
+            padding: 14px 16px;
+            /* Padding yang sama dengan link lain untuk konsistensi */
+            color: blue;
+            /* Warna teks biru */
+            font-weight: bold;
+            /* Membuat teks lebih tebal */
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="main.html">Home</a>
+        <a href="profile_page.html">Profile</a>
+        <a href="programKerja.html">Proker</a>
+        <a href="halamanPengumuman.html">Pengumuman</a>
+        <a href="pengelolaanAnggota.html">Anggota</a>
+        <a href="forumPage.html">Forum</a>
+        <a href="logout.html" id="logout">Log Out</a>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script>
+        // Listener untuk perubahan status autentikasi
+
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            var links = document.querySelectorAll('.navbar a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].style.display === 'block') {
+                    links[i].style.display = 'none';
+                } else {
+                    links[i].style.display = 'block';
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
+</html>
+</html>
